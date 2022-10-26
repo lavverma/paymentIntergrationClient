@@ -6,9 +6,9 @@ import axios from "axios"
 const Home = () =>{
     const checkOutHandler = async (amount) =>{
    
-        const {data : {key}} = await axios.get("http://localhost:3001/getKey")
+        const {data : {key}} = await axios.get("https://paymentintergration.onrender.com/getKey")
 
-     const {data : {order}} = await axios.post("http://localhost:3001/payment" , {
+     const {data : {order}} = await axios.post("https://paymentintergration.onrender.com/payment" , {
         amount
      })
      const options = {
@@ -19,7 +19,7 @@ const Home = () =>{
         description: "Test Transaction",
         image: "https://avatars.githubusercontent.com/u/104074131?s=400&u=4b3299f2794eb623331f43b02207bdb5c2559cd7&v=4",
         order_id: order.id,
-        callback_url: "http://localhost:3001/paymentVerification",
+        callback_url: "https://paymentintergration.onrender.com/paymentVerification",
         prefill: {
             name: "Gaurav Kumar",
             email: "gaurav.kumar@example.com",
