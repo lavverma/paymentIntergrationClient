@@ -3,12 +3,14 @@ import Card from "./Card"
 import {Box , Stack} from "@chakra-ui/react"
 import axios from "axios"
 
+const serverUrl = process.env.REACT_APP_SEVER_URL
+
 const Home = () =>{
     const checkOutHandler = async (amount) =>{
    
-        const {data : {key}} = await axios.get("https://paymentintergration.onrender.com/getKey")
+        const {data : {key}} = await axios.get(`${serverUrl}/getKey`)
 
-     const {data : {order}} = await axios.post("https://paymentintergration.onrender.com/payment" , {
+     const {data : {order}} = await axios.post(`${serverUrl}/payment` , {
         amount
      })
      const options = {
