@@ -21,7 +21,7 @@ const Home = () =>{
         order_id: order.id,
         callback_url: "https://paymentintergration.onrender.com/paymentVerification",
         prefill: {
-            name: "Gaurav Kumar",
+            name: "write your name...",
             email: "gaurav.kumar@example.com",
             contact: "9999999999"
         },

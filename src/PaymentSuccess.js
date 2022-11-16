@@ -10,7 +10,7 @@ function PaymentSuccess() {
   return (
     <Box>
         <VStack h="100vh"  justifyContent={"center"}>
-            <Heading textTransform={"upperCase"}>Order Successful</Heading>
+            <Heading >ORDER SUCCESSFUL</Heading>
                 <Text>
                      Reference No. :- {referenceKey}
                 </Text>
