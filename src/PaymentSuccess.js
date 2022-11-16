@@ -1,11 +1,10 @@
 import { Heading ,Box , VStack, Text } from '@chakra-ui/react'
 import React from 'react'
-import {useSearchParams} from "react-router-dom"
+import {useLocation} from "react-router-dom";
 
 function PaymentSuccess() {
-    const searchQuery = useSearchParams()[0]
-
-    const referenceKey = searchQuery.get("reference")
+  const search = useLocation().search;
+  const referenceKey = new URLSearchParams(search).get('reference');
 
   return (
     <Box>
